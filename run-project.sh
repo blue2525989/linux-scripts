@@ -2,9 +2,9 @@
 
 # start up project
 
-read -p "Enter the directory: " DIRNAME
+DIRNAME=$1
 
-cd ${DIRNAME}
+cd $DIRNAME
 gradle build
 gradle bootrun
 exit 0
