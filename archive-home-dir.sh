@@ -12,14 +12,8 @@ read -p "Enter user name to archive: " $USER
 # prints Archiving user: + the user name
 echo "Archiving user: $USER"
 
-# lock the account while making tar
-sudo passwd -l $USER
-
 # create archive of home directory
 tar cvf /archives/${USER}.tar.gz /home/${USER}
-
-# unlock the account
-sudo passwd -u $USER
 
 echo "Archiving complete."
 
